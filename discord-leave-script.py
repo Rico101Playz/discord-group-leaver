@@ -7,7 +7,7 @@ import numpy as np
 from PIL import ImageGrab
 groupicogray = cv2.cvtColor(cv2.imread(os.path.dirname(os.path.realpath(__file__)) + '\groupico.JPG'), cv2.COLOR_BGR2GRAY)
 leavegroupgray = cv2.cvtColor(cv2.imread(os.path.dirname(os.path.realpath(__file__)) + '\leavegroup.JPG'), cv2.COLOR_BGR2GRAY)
-inputs = sg.Window("Discord group leaver", layout=[[sg.Text("How many groups do you want to leave? (Make sure discord is open and all groups are visible)")],[sg.Input("")],[sg.Button('Perform action'), sg.Button('Cancel')]], margins=(100,50)).read()
+inputs = sg.Window("Discord group leaver", layout=[[sg.Text("How many groups do you want to leave? (Make sure discord is open and all groups you want to remove are visible)")],[sg.Input("")],[sg.Button('Perform action'), sg.Button('Cancel')]], margins=(100,50)).read()
 if str(inputs[0]) == "Cancel":
     quit()
 cycles = int(inputs[1][0])
